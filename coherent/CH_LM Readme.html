@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Instrument Driver Readme</title>
+</head>
+<body>
+<h2>CH_LM Instrument Driver Readme</h2>
+<para>To rate this instrument driver, go to the driver download page on the <a
+ href="http://www.ni.com/idnet">Instrument Driver Network</a>.</para>
+<h4>1. Overview</h4>
+<para>
+Instrument Driver Technology: LabVIEW Plug and Play 
+<br>
+Manufacturer: Coherent, Inc.
+<br>
+Supported Language(s): LabVIEW 8.2
+<br>
+Supported Model(s): LabMax
+<br>
+Model(s) Tested: LabMax TOP
+<br>
+Interface(s): GPIB, Serial, USB
+<br>
+Firmware Revision(s) Tested: V2.9, Mar 20 2008
+<br>
+<br>
+Certified: No
+<br>
+NI Supported: No
+<br>
+Source Code Available: Yes
+<br>
+<br>
+Driver Revision: 1.3
+<br>
+Original Release Date: 11/29/2007
+<br>
+Current Revision Date: 06/15/2008
+</para>
+<h4>2. Required Software</h4>
+<para>Some software components need to be installed before using this
+instrument driver. The minimum versions of these components are listed
+below. They are part of the distribution.
+<br>
+<br>
+LabMax OEM Software: ActiveX Control (CLabMaxLowLevCtl Object) Version 1.0.0.5, USB Driver
+<br>
+<br>
+Refer to the <i>LabVIEW Help</i> for more information about software requirements. You access the <i>LabVIEW Help</i> by selecting <i>Help&raquo;Search the LabVIEW Help</i>.</para>
+<h4>3. Known Issues</h4>
+<para>
+To report issues or provide feedback about this instrument driver,
+please send an email to <a href="mailto:instrument.drivers@ni.com">instrument.drivers@ni.com</a> or
+<a href="mailto:support@BrandNewTechnologies.de">support@BrandNewTechnologies.de</a>.
+<br>
+<!--Include instrument functionality not supported by the driver or known issues as necessary.-->
+</para>
+<br>
+<para>
+<ul>
+<li>The ActiveX Control and or LabMax meter are causing timeouts in rare cases.</li>
+<li>LabMax application can lock up  when using LV 7.1. This problem seems to be not existent with LV 8.2.<br>Lock up is unpredictable due to unknown reason. Moving windows or performing other CPU consuming task lead to higher probability for lock up. You need to restart the application/LabVIEW and may perform a LabMax power cycle to restart.</li>
+<li>Data Delivery Mode = STREAM is recommended for USB only. In case of GBIP or RS232 communication mode it works for low rates, high rates will cause data queue pileup in the meter and data will become displayed with delay due to slow readout.  
+</ul> 
+</para>
+<h4>4. Getting Started ...</h4>
+<para>
+Open the <i>CH_LM VI Tree.vi</i>. In the upper left corner of the block diagram you find the <i>CH_LM ActiveX Control.vi</i>. This VI must be started first and prior to all other VIs of this driver. You can start it manually or call it from your application VI.  You have to specify the communication mode. Only one communication mode can be selected at one time. Mixed communication modes are not supported by the current version of the LabMax ActiveX Control. You can stop the VI from the front panel or via occurrence in an application.<br>
+<br>
+You have to call the <i>CH_LM VI Initialize.vi</i> for every meter you want to use. You need to supply the address, GPIB address or COM port number, or, in case of USB, meter index or serial number. You have to call the <i>CH_LM Close.vi</i> for every meter to disconnect.<br>
+<br>
+You can view the connected meters with serial number and index in: <i>CH_LM Utility Monitor Meter List.vi</i>.<br>
+<br>
+Refer also to the Example VIs to get started.
+</para>
+<h4>5. Demo Application ...</h4>
+<para>
+Open the <i>CH_LM VI Tree.vi</i>. In the upper right corner of the block diagram you find the <i>CH_LM App Main.vi</i> which starts <i>CH_LM ActiveX Control.vi</i> automatically, so, it <B>must not</B> be started before. You will be prompted to specify the communication mode. Only one communication mode can be selected at one time. Mixed communication modes are not supported by the current version of the LabMax ActiveX Control. In case of GPIB and RS232 communication you need to sepcify the LabMax meters to use via <B>Menu->Settings->Interface...</B>. Then you are prompted to select the LabMax meters to be used by the current frontpanel. You can do also change your selection later via <B>Menu->File->Select Devices</B> or by clicking the button in the upper left corner. If you want to read data from multiple selected meters in synchronous mode you have to check the menu option <B>Menu->Settings->DAQ->Synchronous</B>. Use <B>Menu->Help->Show Context Help</B> or press CTRL+H to open the context help window and point with the mouse to the desired control/indicator.<br>
+</para>
+<h4>6. Revision History</h4>
+<para>The latest version of this and other LabVIEW and LabWindows/CVI
+instrument drivers can be downloaded at the
+<a href="http://www.ni.com/idnet">Instrument Driver Network</a> or 
+<a href="http://www.coherent.com">Coherent</a>.<br>
+<br>
+<ul>
+<li>REV 1.0, 11/29/07 (SVN 238) by: Holger Brand, Brand New Technologies, Darmstadt, Germany.<br><i>Original release.</i></li>
+<li>REV 1.1, 01/19/08 (SVN 254) by: Holger Brand, Brand New Technologies, Darmstadt, Germany.<br><i>Performance of data streaming via GPIB and RS232 communication mode improved.</i></li>
+<li>REV 1.3, 06/15/08 (SVN 266) by: Holger Brand, Brand New Technologies, Darmstadt, Germany.<br><i>
+<ul>
+<li>LabMax PC</li>
+<ul>
+<li>Improved connection dialog</li>
+<li>Application window resizing enabled</li>
+<li>Automatic switching of delivery mode</li>
+<li>Improved error handling</li>
+<li>Resolution menu added</li>
+<li>Large live display tab added</li>
+<li>Wavelength selection improved</li>
+<li>Avoiding nested INITiate/ABORt</li>
+<li>Scrollbars for LabMax PC GUI enabled</li>
+<li>Menu item DAQ->Buffered DAQ removed</li>
+<li>Context help of "Log Data To File" modified</li>
+<li>Coloring of "Start/Stop Data Collection" button modified</li>
+<li>Context help of "Counts" modified</li>
+<li>DAQ Timeout reduced to 100ms</li>
+<li>Offline Data Viewer modified: Statistics.Counts now displays the real number of samples in file.
+<li>Now using individual Live Data Averaging value for each meter.</li>
+</ul>
+<li>CH_LM driver</li>
+<ul>
+<li>Error Query.vi: Usage of abbreviated commands to improve performance</li>
+<li>Measurement Initiate.vi: Flushing of data queue after INITiate removed</li>
+<li>Utility Probe Information.vi: Checking for connected sensor first to avoid subsequent errors.</li>
+<li>Use abbriviated commands only to improve performance.</li>
+<li>Optional parameter added to the "CH_LM Utility Probe Information.vi" to read probe type and qualifier only.</li>
+<li>Work around introduced to overcome missing <CR><LF> in MAX *IDN? query.</li>
+<li><i>Ignore previous=true</i> for waiting on SRQ notifications.</li>
+</ul>
+</ul>
+</ul>
+</body>
+</html>

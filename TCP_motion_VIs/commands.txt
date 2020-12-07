@@ -1,0 +1,19 @@
+Main Sytax:
+
+SEND				RECEIVE
+
+Device Axis:Command:Value	Parameter:value
+
+Commands:
+
+MOVEABS			- move axis to absolute position	response: ""
+GETPOS			- get position of axis			response: "POS:value"
+
+Example:
+
+4D X:MOVEABS:1.234		
+SP RY:GETPOS:			POS:1.234
+
+Errors:
+
+if an error occurrse, the response will be: "ERR:errordescription"

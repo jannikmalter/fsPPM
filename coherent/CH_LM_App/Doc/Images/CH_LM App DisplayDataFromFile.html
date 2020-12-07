@@ -1,0 +1,323 @@
+<HTML>
+<HEAD>
+<TITLE>CH_LM App DisplayDataFromFile.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="CH_LM App DisplayDataFromFile.vi"></A><H2>CH_LM App DisplayDataFromFile.vi</H2>
+<P>This VI opens a data file reads the contents and displays them on the frontpanel.</P>
+<HR>
+<H3>Front Panel</H3>
+<P><IMG SRC="CH_LM App DisplayDataFromFilep.png" ALT="CH_LM App DisplayDataFromFile.vi"></P>
+<HR>
+<H3>Controls and Indicators</H3>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cpath.png" ALT="cpath"></P>
+</TD>
+<TD>
+<B>Path</B> <P>Filename of data to display.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Close</B> <P>Click to close this window.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Print</B> <P>Click to print this window.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ccclst.png" ALT="ccclst"></P>
+</TD>
+<TD>
+<B>Statistics Type</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cstr.png" ALT="cstr"></P>
+</TD>
+<TD>
+<B>Serial</B> <P>Serial number of LabMax device</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdbl.png" ALT="cdbl"></P>
+</TD>
+<TD>
+<B>Mean</B> <P>Displays the average of the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdbl.png" ALT="cdbl"></P>
+</TD>
+<TD>
+<B>Std. Dev.</B> <P>Displays the standard deviation of the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdbl.png" ALT="cdbl"></P>
+</TD>
+<TD>
+<B>Min</B> <P>Displays the minimum value in the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdbl.png" ALT="cdbl"></P>
+</TD>
+<TD>
+<B>Max</B> <P>Displays the maximum value in the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>Counts</B> <P>Displays the number of measurements taken in the current data set.  Counter resets when &quot;Reset&quot; button is pressed.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu8.png" ALT="cu8"></P>
+</TD>
+<TD>
+<B>column</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ipath.png" ALT="ipath"></P>
+</TD>
+<TD>
+<B>Data file</B> <P>Name of selected data file</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="istr.png" ALT="istr"></P>
+</TD>
+<TD>
+<B>Date and Time</B> <P>Date and Time of measured data.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="i2ddbl.png" ALT="i2ddbl"></P>
+</TD>
+<TD>
+<B>Waveform Graph</B> <P>Display of measured data.</P>
+<P></P>
+<P>Use the available controls to manipulate the display.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="i1dcclst.png" ALT="i1dcclst"></P>
+</TD>
+<TD>
+<B>Statistics Array</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="icclst.png" ALT="icclst"></P>
+</TD>
+<TD>
+<B>Statistics</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="istr.png" ALT="istr"></P>
+</TD>
+<TD>
+<B>Serial</B> <P>Serial number of LabMax device</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Mean</B> <P>Displays the average of the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Std. Dev.</B> <P>Displays the standard deviation of the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Min</B> <P>Displays the minimum value in the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Max</B> <P>Displays the maximum value in the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>Counts</B> <P>Displays the number of measurements taken in the current data set.  Counter resets when &quot;Reset&quot; button is pressed.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="icclst.png" ALT="icclst"></P>
+</TD>
+<TD>
+<B>Statistics</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="istr.png" ALT="istr"></P>
+</TD>
+<TD>
+<B>Property</B> <P>This indicator contains two informations separated by &quot;:&quot;.</P>
+<P>- Serial number of LabMax device</P>
+<P>- Measurments type (Energy/Power, Rep. Rate, Postion X, Position Y)</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Mean</B> <P>Displays the average of the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Std.Dev.</B> <P>Displays the standard deviation of the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Min</B> <P>Displays the minimum value in the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Max</B> <P>Displays the maximum value in the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>Counts</B> <P>Displays the number of measurements taken in the current data set.  Counter resets when &quot;Reset&quot; button is pressed.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="i2dstr.png" ALT="i2dstr"></P>
+</TD>
+<TD>
+<B>Table</B> <P>This table displays the data as text strings.</P>
+</TD>
+</TR>
+</Table>
+</BODY>
+</HTML>

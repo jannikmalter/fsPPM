@@ -1,0 +1,1098 @@
+<HTML>
+<HEAD>
+<TITLE>CH_LM App GUI.vit</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="CH_LM App GUI.vit"></A><H2>CH_LM App GUI.vit</H2>
+<P>This is a VI-Template for LabMax PC Application Frontpanel instances.</P>
+<P></P>
+<P>The Main-Panel will be created from the CH_LM App Main.vi. More Child-Panels can be created from the menu of the Main- or Child-Panels. Child-Panels can be closed, but the application can be exited from the Main-Panel only.</P>
+<HR>
+<H3>Front Panel</H3>
+<P><IMG SRC="CH_LM App GUIp.png" ALT="CH_LM App GUI.vit"></P>
+<HR>
+<H3>Controls and Indicators</H3>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>MainGUI?</B> <P>True: Dispatch new thread as parent GUI.</P>
+<P>False: Dispatch new thread as child GUI.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cocrn.png" ALT="cocrn"></P>
+</TD>
+<TD>
+<B>Stop Main Occurrence</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cocrn.png" ALT="cocrn"></P>
+</TD>
+<TD>
+<B>Device disable occurrence</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cocrn.png" ALT="cocrn"></P>
+</TD>
+<TD>
+<B>Menu occurrence</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>stop</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cvirn.png" ALT="cvirn"></P>
+</TD>
+<TD>
+<B>i ref</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Reset Error</B> <P>Click to reset error state.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cocrn.png" ALT="cocrn"></P>
+</TD>
+<TD>
+<B>Continue occurrence</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Update Status</B> <P>Click here to update the status of the selected LabMax, especially the Measurement Range of a new sensor.</P>
+<P></P>
+<P><B>Note:</B> The meter will be locked for remote operation again.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu16.png" ALT="cu16"></P>
+</TD>
+<TD>
+<B>LabMax Meters</B> <P>Ring is populated with the serial numbers of all selected LabMax meters, with the currently visible serial number indicating the selected LabMax meter.</P>
+<P></P>
+<P><B>Note:</B> Ongoing data logging is stopped and all history buffers are cleared when another device is selected, connected to or disconnected from USB.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Start/Stop Data Collection</B> <P>Enables/disables data collection (including on screen display).</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ccclst.png" ALT="ccclst"></P>
+</TD>
+<TD>
+<B>DAQ Command</B> <P>This cluster contains the command string and paramter to be send to a DAQ thread.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Wait at Rendesvouz</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cstr.png" ALT="cstr"></P>
+</TD>
+<TD>
+<B>Command</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cenum.png" ALT="cenum"></P>
+</TD>
+<TD>
+<B>Sample Collection</B> <P>Select the Logging/plotting mode.</P>
+<P></P>
+<P><B>Fixed</B> takes and plots the number of data points shown in Sample Size.  </P>
+<P><B>Continuous</B> takes data continuously and plots the number of data points shown in Sample Size in the Chart window, scrolling the window to continually show the newest data.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Fixed</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Continuous</B> </TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>Sample Size</B> <P>Selects the sample size to collect when in Fixed mode, and the sample size to use for statistics when in both Fixed and Continuous mode.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cenum.png" ALT="cenum"></P>
+</TD>
+<TD>
+<B>Collection Mode</B> <P>Select between continuous data acquisition and data acquisition on a fixed time interval.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Time Interval</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Streaming</B> </TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdbl.png" ALT="cdbl"></P>
+</TD>
+<TD>
+<B>T / ms</B> <P>Sets the collection interval when in time interval data collection mode.  This control should only be visible when time interval data collection is selected and hidden when continuous is selected.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>NofBins</B> <P><B>intervals</B> must be greater than zero. If <B>intervals</B> is less than or equal to zero, the histogram is undefined, and the VI sets <B>Histogram: h(X)</B> and <B>X Values</B> to empty arrays and returns an error. The default is 1.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu32.png" ALT="cu32"></P>
+</TD>
+<TD>
+<B>Point(s)</B> <P>Enables averaging of the last N data points for the Power/Energy and plot displays.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cpath.png" ALT="cpath"></P>
+</TD>
+<TD>
+<B>Log Data File</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Log data to File</B> <P>Enables/Disables saving currently streaming data to the Log File.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Pause</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>Meter Index</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu16.png" ALT="cu16"></P>
+</TD>
+<TD>
+<B>Data format</B> <P>Bit 0: Raw data</P>
+<P>Bit 1: Calculated data</P>
+<P>Bit 2: X value</P>
+<P>Bit 3: Y value</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cenum.png" ALT="cenum"></P>
+</TD>
+<TD>
+<B>Delivery Mode</B> <P>Data delivery mode for thermopile or optical probes</P>
+<P></P>
+<P><B>Range:</B></P>
+<P>0: <B>Last</B>: simply the last available data record</P>
+<P>1: <B>Stream</B>: continuous stream of sampled data records</P>
+<P></P>
+<P><B>Default:</B> Last</P>
+<P></P>
+<P><B>Attention:</B> If this command is issued while data collection is enabled the setting will not take effect until the next data collection cycle begins.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Autoscale</B> <P>Y-Axis Scaling:</P>
+<P></P>
+<P>Checked: Auto scale</P>
+<P>Unchecked: Fix scale</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>Number Of Bins</B> <P>Number of bins to be used to calculate the histogram.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Reset Maximum</B> <P>Click to reset the maximum value.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Tuning Scale</B> <P>Use this button to select the scaling range of the tuning meter.</P>
+<P></P>
+<P><B>Min - Max:</B> sets the low end of the scale range to the Minimum value in the current data set and the high end of the scale range to the highest value measured since the last reset.</P>
+<P><B>Zero - Max:</B> sets the scale range from Zero to the Maximum of the granted measurement range.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cenum.png" ALT="cenum"></P>
+</TD>
+<TD>
+<B>Tab Control</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Autoscale 2</B> <P>Y-Axis Scaling:</P>
+<P></P>
+<P>Checked: Auto scale</P>
+<P>Unchecked: Fix scale</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cpath.png" ALT="cpath"></P>
+</TD>
+<TD>
+<B>Log Data File</B> <P>Current file used to log data.</P>
+<P></P>
+<P>Expected filename format: *[_n].*</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Log Data To File</B> <P>Enables/Disables saving currently streaming data to the Log File.</P>
+<P></P>
+<P><B>Hint:</B> This control becomes enabled when a Log Data File is specified.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cenum.png" ALT="cenum"></P>
+</TD>
+<TD>
+<B>Mode</B> <P>Select the measurement mode</P>
+<P></P>
+<P>- Energy (J)</P>
+<P>- Power (W)</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Energy</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Power</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Power/dBm</B> </TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu32.png" ALT="cu32"></P>
+</TD>
+<TD>
+<B>Point(s)</B> <P>Enables averaging of the last N data points for the Power/Energy and plot displays.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>Sample Size</B> <P>Selects the sample size to collect when in Fixed mode, and the sample size to use for statistics when in both Fixed and Continuous mode.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Reset</B> <P>Resets the data set used for statistics (Mean, Min, Max, Std Dev, and Counts).</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu16.png" ALT="cu16"></P>
+</TD>
+<TD>
+<B>Measurement Range</B> <P>Select between auto ranging and fixed manual ranges.  This control needs to be set to the current state of the meter when switching between or initializing meters, and populated with choices based on the current probe attached and the measurement mode.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdbl.png" ALT="cdbl"></P>
+</TD>
+<TD>
+<B>Collection Interval</B> <P>Sets the collection interval when in time interval data collection mode.  This control should only be visible when time interval data collection is selected and hidden when continuous is selected.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Zero Meter</B> <P>Zeroes the FieldMaxII meter.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdbl.png" ALT="cdbl"></P>
+</TD>
+<TD>
+<B>Wavelength</B> <P>Wavelength of operation to set.</P>
+<P></P>
+<P><B>Unit:</B> nm</P>
+<P></P>
+<P><B>Range:</B> 1 - 99999 nm</P>
+<P></P>
+<P><B>Default:</B> 1064 nm</P>
+<P></P>
+<P><B>Note:</B> You can edit the unit string, especially the prefix( n/u) to your needs</P>
+<P></P>
+<P>The attached probe limits the wavelength of operation to the range of minimum and maximum wavelengths stored in the attached probe.  If requested wavelength is less than the minimum wavelength, the granted wavelength is set to the minimum wavelength.   If requested wavelength is greater than the maximum wavelength, the granted wavelength is set to the maximum wavelength.   If a valid probe is not attached, the minimum wavelength is taken as 1 nm and the maximum wavelength is taken as 99999 nm.  </P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu16.png" ALT="cu16"></P>
+</TD>
+<TD>
+<B>Wavelength Units</B> <P>Selects the length unit of Wavelength to</P>
+<P></P>
+<P>um: micrometer</P>
+<P>nm: nanometer</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu16.png" ALT="cu16"></P>
+</TD>
+<TD>
+<B>Collection Interval Units</B> <P>Sets the time unit of Collection Interval to</P>
+<P></P>
+<P>sec: seconds</P>
+<P>min: minutes</P>
+<P>hr: hours</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdbl.png" ALT="cdbl"></P>
+</TD>
+<TD>
+<B>%</B> <P>Sets the internal trigger threshold in % of full-scale.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="csgl.png" ALT="csgl"></P>
+</TD>
+<TD>
+<B>Factor</B> <P>Factor used in attenuation correction.</P>
+<P><B>Default Value: </B> 1.0</P>
+<P><B>Range:</B> 0.01 - 999.99</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Attenuation Correction</B> <P>Turns the attenuation correction feature on and off.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>% Of Mean</B> <P>Display the Standard Deviation relativ to Mean value.</P>
+<P></P>
+<P><B>Range:</B></P>
+<P>True: % of Mean value</P>
+<P>False: Ablsolute value of Standard Deviation</P>
+<P></P>
+<P><B>Default:</B> False</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cenum.png" ALT="cenum"></P>
+</TD>
+<TD>
+<B>Sample Collection</B> <P>Select the Logging/plotting mode.</P>
+<P></P>
+<P><B>Fixed</B> takes and plots the number of data points shown in Sample Size.  </P>
+<P><B>Continuous</B> takes data continuously and plots the number of data points shown in Sample Size in the Chart window, scrolling the window to continually show the newest data.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Fixed</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Continuous</B> </TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cenum.png" ALT="cenum"></P>
+</TD>
+<TD>
+<B>Collection Mode</B> <P>Select between continuous (streaming) data acquisition and data acquisition on a fixed time interval.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Time Interval</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Streaming</B> </TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ccclst.png" ALT="ccclst"></P>
+</TD>
+<TD>
+<B>Unit References</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cstrrn.png" ALT="cstrrn"></P>
+</TD>
+<TD>
+<B>Power/Energy Display</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdnmrn.png" ALT="cdnmrn"></P>
+</TD>
+<TD>
+<B>Mean</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdnmrn.png" ALT="cdnmrn"></P>
+</TD>
+<TD>
+<B>Std Dev</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdnmrn.png" ALT="cdnmrn"></P>
+</TD>
+<TD>
+<B>Min</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdnmrn.png" ALT="cdnmrn"></P>
+</TD>
+<TD>
+<B>Max</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cwcrn.png" ALT="cwcrn"></P>
+</TD>
+<TD>
+<B>Online Chart</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cstrrn.png" ALT="cstrrn"></P>
+</TD>
+<TD>
+<B>Tuning Unit</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cwcrn.png" ALT="cwcrn"></P>
+</TD>
+<TD>
+<B>Synchronized</B> </TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdbl.png" ALT="cdbl"></P>
+</TD>
+<TD>
+<B>Offset</B> <P>Offset for the calculated signal.</P>
+<P></P>
+<P><B>Default Value: </B> 0.0</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu8.png" ALT="cu8"></P>
+</TD>
+<TD>
+<B>Signal 1</B> <P>Index of signal 1 to be used for the math calculation.</P>
+<P></P>
+<P><B>Default:</B> 0</P>
+<P></P>
+<P><B>Raange:</B> 0-7</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cu8.png" ALT="cu8"></P>
+</TD>
+<TD>
+<B>Signal 2</B> <P>Index of signal 2 to be used for the math calculation.</P>
+<P></P>
+<P><B>Default:</B> 1</P>
+<P></P>
+<P><B>Raange:</B> 0-7</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cenum.png" ALT="cenum"></P>
+</TD>
+<TD>
+<B>Function</B> <P>Function to be used for the math calculation.</P>
+<P></P>
+<P><B>Default:</B> add</P>
+<P></P>
+<P><B>Range:</B> add, substract, multiply, divide</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>Select Meters</B> <P>Click to select LabMax meters to be used in this window.</P>
+<P></P>
+<P>A selection dialog will be opened.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="c1dtdef.png" ALT="c1dtdef"></P>
+</TD>
+<TD>
+<B>Devices</B> <P>List of LabMax devices tro use in the DAQ thread.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ccclst.png" ALT="ccclst"></P>
+</TD>
+<TD>
+<B>LabMax Device List Element</B> <P>This cluster correlates a serial number and the corresponding connection index of a LabMax device.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cstr.png" ALT="cstr"></P>
+</TD>
+<TD>
+<B>Serial Number</B> <P>Specifies the serial number of the instrument to use. </P>
+<P></P>
+<P><B>Hint:</B> Serial number can be ignored if in case of GPIB or RS232 communication mode.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>Meter Index</B> <P>The meter index parameter that exists in many places in the API will have different meanings for the different communication modes:</P>
+<P><B>USB:</B> a number from 0 to 127, used as an OS assigned number to meters that are connected to and disconnected from the computer via the USB</P>
+<P><B>GPIB:</B> a number from 0 to 31, used as the user assigned GPIB address</P>
+<P><B>RS232:</B> a number from 1 to 9, used as the user assigned COM port number (for example, 2 represents COM2)</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="cdbl.png" ALT="cdbl"></P>
+</TD>
+<TD>
+<B>Aperture R / mm</B> <P>Radius of Aperture in milimeter (mm)</P>
+<P></P>
+<P><B>Unit:</B> mm</P>
+<P></P>
+<P><B>Range:</B> 0.01 - 500.00 mm</P>
+</TD>
+</TR>
+</Table>
+</UL>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Online Chart</B> <P>Right click on Y-axis to toggle autoscaling.</P>
+<P></P>
+<P>Type in the numbers for maximum and minimum of the Y-axis.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="icclst.png" ALT="icclst"></P>
+</TD>
+<TD>
+<B>Histogram</B> <P>Histogram of measurement values in the sample buffer.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="inclst.png" ALT="inclst"></P>
+</TD>
+<TD>
+<B>Tuning Feature</B> <P>The tuning meter has two needles.</P>
+<P></P>
+<P><B>Green:</B> Current measurement value</P>
+<P><B>Red:</B> Maximum of measured values</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="inclst.png" ALT="inclst"></P>
+</TD>
+<TD>
+<B>Synchronized</B> <P>Right click on Y-axis to toggle autoscaling.</P>
+<P></P>
+<P>Type in the numbers for maximum and minimum of the Y-axis.</P>
+<P></P>
+<P>The plot legend ID's (LabMax i) refer to the position of  the LabMax Meter's drop down menu list.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Mean</B> <P>Displays the average of the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Std Dev</B> <P>Displays the standard deviation of the last N (Sample Size) samples.</P>
+<P></P>
+<P><B>Unit:</B> same as Mean or % of Mean</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Min</B> <P>Displays the minimum value in the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Max</B> <P>Displays the maximum value in the last N (Sample Size) samples.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>Counts</B> <P>Displays the number of measurements taken in the current data set.  Counter resets when &quot;Reset&quot; button is pressed.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Rep Rate</B> <P>Displays the Rep. Rate in Hz of the measured signal (pulsed laser only).</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="istr.png" ALT="istr"></P>
+</TD>
+<TD>
+<B>Power/Energy Display</B> <P>Displays the current meter reading, if Live Data Averaging is set to 1 point.  If Live Data Averaging is set to N points, this indicator displays the average of the last N points.</P>
+<P></P>
+<P><B>Unit:</B> Joule or Watt, depending on measurement mode.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ipict.png" ALT="ipict"></P>
+</TD>
+<TD>
+<B>BullsEye</B> <P>Bull's Eye View of the laser beam position of the first meter in the list of selected meters.</P>
+<P></P>
+<P>Position values are scaled. The outer ring refers to the aperture radius.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>synchronized</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="i1di32.png" ALT="i1di32"></P>
+</TD>
+<TD>
+<B>Meter Indices</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>Meter Index</B> </TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="istr.png" ALT="istr"></P>
+</TD>
+<TD>
+<B>Std Dev</B> <P>Displays the standard deviation of the last N (Sample Size) samples.</P>
+<P></P>
+<P><B>Unit:</B> same as Mean or % of Mean</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="istr.png" ALT="istr"></P>
+</TD>
+<TD>
+<B>Tuning Unit</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="ipict.png" ALT="ipict"></P>
+</TD>
+<TD>
+<B>BullsEye 2</B> <P>Bull's Eye View of the laser beam position of the selected meter.</P>
+<P></P>
+<P>Position values are scaled. The outer ring refers to the aperture radius.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="idbl.png" ALT="idbl"></P>
+</TD>
+<TD>
+<B>Range Max</B> </TD>
+</TR>
+</Table>
+</BODY>
+</HTML>
